@@ -1,0 +1,53 @@
+Some Important Terms
+
+Network: Resources connected together with devices -----> This system as a whole is called network
+
+LAN (Local Area Network)
+MAN (Metropolitian Area Network) -----> UP, Delhi, Punjab, Assam, etc
+WAN (Wide Area Network) -----> India, Nepal, US, Japan, etc
+PAN (Personal Area Network)
+
+
+Internet: Global System, Network of networks (Super Entity) -----> Billions of devices are interconnected
+
+WWW: World Wide Web (Can be refered as web generally) -----> Subset of Internet (Service provided by it)
+
+IP Address: A unique numerical identifier for every device or network that connects to the internet 
+
+Browser: Tool to access doc, resources, websites, webapp on the Internet                                            [E.g: Chrome(By google), Safari(by apple), Edge(by microsoft)]
+
+Browser Engine: S/W to access these resources, It is a type of application, which can be used as a client to request something, can be used to render something on a window                                                  
+
+-----> Blink (Powers major web browsers -----> Brave, Opera, Chrome, etc)
+-----> WebKit (Powers Apple Safari)
+-----> Gecko (Powers Mozilla Firefox)
+
+
+Client/Server
+
+ __________             Request           __________
+|          |    -------------------->    |          |             
+|          |                             |          |
+|__________|    <--------------------    |__________|
+     /\                 Response              /\
+   Client                                   Server
+
+Request -----> get (Client can ask for data from server) -----> fetch
+        -----> put (Client can give data to server)  
+        -----> post (Client can update data on server)
+        -----> delete (client can remove data from the server)
+
+Response: Server gives the asked thing
+
+Client -----> The one who is requesting -----> LAPTOP, PC, MOBILE
+                                        -----> BROWSER
+                                        -----> APP
+                                        -----> CLI
+
+Server -----> The one which has the data -----> DB Server
+                                         -----> File Server
+                                         -----> App Server
+                                         -----> Web Server
+                                         -----> Email Server
+
+DNS(Domain Name Server/System) Server Converts Domain Name into IP Address -----> This Process is called Domain Name Resolution

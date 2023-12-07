@@ -1,0 +1,20 @@
+Website -----> static -----> No user interruption (almost negligible) 
+                      -----> On reload content don't change 
+                      -----> read only
+
+Web App -----> dynamic -----> On reload data gets changed
+                       -----> On user interaction data gets changed    
+
+Web Development -----> Process of creating websites and web applications
+
+Depends on use case to create website or web applications
+
+
+MERN Stack (MongoDB Express.js React.js Node,.js (Libraries))
+
+Points ------> Learn By Applying
+       ------> Always add your touch (Google it)
+       ------> Always Practice
+       ------> Use Code Medium (Publish your own articles about your development)
+       ------> Share your progress on LinkedIn
+

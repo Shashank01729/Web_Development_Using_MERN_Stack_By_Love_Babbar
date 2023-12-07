@@ -1,0 +1,109 @@
+How Internet Works?
+
+Inter Net => Interconnected Networks (Global System, interconnected n/w of billions of devices, computer, etc)
+
+History:
+
+1960s -----> ARPANET (DOD, Department of Defence)
+
+ __________                               __________
+|          |    Small Chunks (Packets)   |          |             
+|          |    -------------------->    |          |
+|__________|                             |__________|
+     /\                                       /\
+   Source                                 Destination
+
+1970 -----> ARPANET continued to expand and TCP was developed
+1980 -----> TCP/IP and DNS
+1990 -----> WWW
+2000 -----> BroadBand and Media (FB)
+Today -----> Ubiquitous Connectivity and Advanced Technologies (5G, IoT, cloud computing, etc)
+
+To send msg to a destination machine we need ip adddress of that particular machine
+
+ISP -----> Internet Service Provider -----> We access internet through ISP
+
+                                 _____
+ __________                     |     |               __________
+|          |      Request       |  I  |              |          |
+|          |    ---------->     |  S  |    ----->    | INTERNET |
+|__________|                    |  P  |              |__________|
+     /\                         |_____|                
+                             
+Not Directly
+
+
+
+PROTOCOL STACK: 
+
+SRC ----------> DEST (If sending, let suppose 10 MB packet, then send it in small chuncks/packets)
+
+Layers
+
+  Top to Down                                 Down to Top
+ _____________                               _____________
+| APPLICATION |                             | APPLICATION |
+| TCP         |                             | TCP         |
+| IP          |                             | IP          |
+| HARDWARE    |     -->  INTERNET  -->      | HARDWARE    |
+|_____________|                             |_____________|
+     
+    USER A                                      USER B
+
+Protocol: Set of rules
+TCP: Specifies prot number
+IP: Add ip address in the request of the destination machine
+In hardware, communication can be wired or wireless 
+
+
+PACKET TRAVEL:
+
+                    Client wants to send a request  
+                                  |
+                             Goes to ISP  
+                                  |
+Checks if it knows the ip address of the server where the request is to be forwarded 
+                                  |
+                        Goes to Server (If valid)
+
+There can be many routers between client and server
+
+
+There are many ISP
+Browser -----> Request -----> Local ISP -----> Regional ISP -----> National Service Provider 
+
+Router have a special data, called routing table
+When request reaches router, if it knows the path then it will route the request, if no entry found, then it shows default behaviour -----> provide request to its parent router and then checks in its routing table for the entry and so on...
+
+
+PROTOCOLS -----> HTTP
+          -----> FTP
+          -----> SMTP, etc
+
+OSI MODEL
+TCP IP MODEL
+
+/* Homework */ 
+
+Switch: A switch is a network device that operates at the data link layer(Layer 2) of the OSI model. 
+        It connects devices within a local area network(LAN) and uses MAC addresses to forward data to the correct destination
+ 
+Hub: A hub is a basic networking device that operates at the physical layer(Layer 1) of the OSI model. 
+     It is a simple device that connects multiple devices in a network, but it doesn't have the intelligence to forward data selectively based on MAC addresses like a switch
+
+Router: A router is a network device that operates at the network layer(Layer 3) of the OSI model. 
+        It connects different networks and uses IP addresses to forward data between them
+
+Modem: A modem(modulator-demodulator) is a device that modulates and demodulates signals to enable 
+       digital data to be transmitted over analog communication channels. It is commonly used to connect a computer or router to the internet over a telephone or cable line
+
+
+The Command by which i can print the ip address of www.google.com server, if yes then how will you do it, if not then why can't we do it?
+
+Command: ping www.google.com
+
+
+IPv4 (Internet Protocol version 4) -----> It is the fourth version of the Internet Protocol, using 32-bit addresses and widely deployed, but facing exhaustion of available addresses
+
+IPv6 (Internet Protocol version 6) -----> It is the latest version, using 128-bit addresses to accommodate a vast number of unique addresses and overcome the limitations of IPv4
+

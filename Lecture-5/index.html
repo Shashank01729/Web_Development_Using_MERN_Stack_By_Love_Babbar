@@ -1,0 +1,196 @@
+<!-- 
+    TAGS: It is a markup entity
+          Special word by which we provide structure, meaning(Semantics) and formatting(E.g: underline, strike, etc) to the content   
+          E.g: html,head,body 
+    
+    Semantics: <h1> ... <h6>, <p>, <a>, <ul>, <ol>, <img>, <form>, <input>, etc
+    Structure: <html>, <head>, <body>, <header>, <main>, <aside>, <footer>, <article>, <section>, <nav>, etc
+    Formatting: <b>, <i>, <u>, <s>, <strong>, <em>, <sup>, <sub>, <pre>, <code>, <br> (self closing tag), etc
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1 style="background-color: aqua;"> Heading 1</h1>
+        <h2 style="color: brown;"> Heading 2</h2>
+        <h3> Heading 3</h3>
+        <h4> Heading 4</h4>
+        <h5> Heading 5</h5>
+        <h6> Heading 6</h6>
+        <h7> Heading 7</h7>   <!-- Behaves as a paragraph-->
+
+        <p> Paragraph </p>
+        <!-- This means that h1 significance/importance is more than h2,h3,h4,h5,h6 (Don't just look for size) -->
+        <!-- Multiple Cursors: alt + left click -->
+
+        <a href="https://www.google.com/" target="#" id="Book_mark1">Click Here to Open Google</a>
+
+
+        <!-- Types of list -->
+
+        <ul>
+            <li>Shashank</li>
+            <li>Shivam</li>
+            <li>Akshat</li>
+        </ul>
+        
+        <!-- shortcut(emmet): ol>li*3 -->
+        <ol>
+            <li>Shashank</li>
+            <li>Shivam</li>
+            <li>Akshat</li>
+        </ol>
+
+        <!-- Don't look the changes on screen, difference between ordered and unordered is in the semantics -->
+        <!--  
+            HTML List Tags
+
+            Tag	        Description
+            
+            <ul>	Defines an unordered list
+            <ol>	Defines an ordered list
+            <li>	Defines a list item
+            <dl>	Defines a description list
+            <dt>	Defines a term in a description list
+            <dd>	Describes the term in a description list
+        -->
+
+
+        <!-- Table -->
+        <table>
+            <tr>
+                <td>Roll_No</td>
+                <td>Name</td>
+                <td>Age</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Shashank</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Devnath</td>
+                <td>20</td>
+            </tr>
+        </table>
+
+        <!-- Shortcut: able>(tr>td*3)*3 -->
+
+        <br>
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt22297712%2F&psig=AOvVaw2bLNYO7qFqzV6eTheSsVXC&ust=1701884297845000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPi4q5vr-IIDFQAAAAAdAAAAABAE" alt="My Love Story with Yamada-kun at Lv999">
+        <br>
+        <img src="1.jpg" alt="" height="500px">
+        <br>
+        <!-- If we have text inside tag we call them attributes, so img attributes are src,alt,etc -->
+        <!-- If any issue, then shows alternative -->
+
+        
+        <!-- Creating a Bookmark -->
+        <!-- Give id to the tag which you want to go to and use that id in the anchor tag with # -->
+        <a href="#Book_mark1">Click here</a>
+
+
+        <!-- Formatting tags -->
+        <p>
+            Lorem <b>ipsum</b> dolor <strong>sit</strong> amet <em>consectetur</em> adipisicing <i>elit</i>. Quos cumque hic voluptas consectetur? 
+            Deleniti odio a eum consequatur voluptatum sed necessitatibus nesciunt sequi. 
+            Officia odio tempore deserunt perferendis natus debitis itaque exercitationem cumque voluptatum 
+            numquam accusamus voluptatibus explicabo ratione perspiciatis pariatur, eveniet animi dolorum 
+            quis dolor! Sunt dolor inventore eius?
+        </p>
+        <!-- Don't use bold here, since it is part of styling, use it in css -->
+
+        <!-- Bold and strong are different. Whenever text to speech of this content, 
+             then strong is more emphasized. We have added a meaning to it. -->
+
+        <!-- The <em> tag is used to draw the reader's attention to the text and suggests that the enclosed 
+             text should be spoken with a higher pitch and with a slightly drawn out and more emphasized voice 
+             compared to a regular sentence. The <i> tag, on the other hand, is used to render text in an 
+             italicized font. -->
+        
+
+        <p>
+            2<sup>5</sup>
+        </p>
+
+        <p>
+            CO<sub>2</sub>
+        </p>
+
+
+        <pre>
+            My Name is Shashank Kumar Pandey. 
+            I live in Lucknow.
+        </pre>
+
+        <!-- pre tag used to display content as it is written -->
+
+
+    </body>
+</html>
+
+
+<!-- 
+    Multiple h1 tags?
+
+    Well, if there's a logical reason to have multiple sections, 
+    it's not so bad to have, you know multiple h1s. I would pay attention to overdoing it. 
+    If your entire page is h1, that looks pretty cruddy, right? 
+    So don't do all h1 and then you CSS to make it look like regular text because we see people, 
+    who are competitors complain about that if users ever turn off CSS or the CSS doesn't load, 
+    it looks really bad. So, you know, it's ok to have a little bit of h1 here and then maybe there's two sections on a page, 
+    and so maybe have a little bit of h1 here.
+
+    But you really should use it for headers or headings, which is what the intent is. 
+    Not to just throw h1 everywhere you can on a page. Because I can tell you, if you just throw h1 everywhere on a page, 
+    people have tried to abuse that and so our algorithms try to take that into account so it doesn't really do you that much good. 
+    So I would use it where it makes sense and more sparingly, but you can have it multiple times.
+
+-->
+
+
+<!-- Use strong and em in html, as structural instead of b and i (use them in css) -->
+
+<!-- 
+    Tag Vs Element
+
+    <html>..........................<\html>
+Opening Tag        Content         Closing Tag
+
+This as a whole is called element
+-->
+
+<!-- 
+    Structural Tag
+
+    header
+    nav
+    main
+    article
+    section
+    aside
+    footer
+-->
+
+<!-- 
+    Article Vs Section
+
+    “The section element is also new with HTML5, and has a slightly different semantic meaning than article. 
+    An article is for standalone content, and a section is for grouping thematically related content. 
+    They can be used within each other, as needed.
+    
+    <article> is related to <section>, but is distinctly different. Whereas <section> is for grouping distinct 
+    sections of content or functionality, <article> is for containing related individual standalone pieces 
+    of content, such as individual blog posts, videos, images or news items. Think of it this way - if you 
+    have a number of items of content, each of which would be suitable for reading on their own, and would
+    make sense to syndicate as separate items in an RSS feed, then <article> is suitable for marking them up.
+-->

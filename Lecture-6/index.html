@@ -1,0 +1,318 @@
+<!-- 
+    emmet is a plugin installed on vs code by default 
+    We use shortcuts to generate full code
+-->
+
+<!-- 
+    paragraph in paragraph in paragraph: p>p>p
+    
+    inside paragraph need image: p>img 
+
+    inside paragraph include heading: p>h1
+
+    if need two tag together: article+section
+
+    write content in paragraph: p{Paragraph 1}
+
+    write content in heading: h3{Heading 1}
+
+    write content in article: article{Article 1}
+
+    write content inside section: section{Section 1}
+
+    write random words till the number inside paragraph: p>lorem10
+
+    give id to paragraph tag: p.id1
+
+    give class to paragraph tag: p.class1
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p>
+            <p>
+                <p>
+
+                </p>
+            </p>
+        </p>
+
+        <p><img src="" alt=""></p>
+
+        <p>
+            <h1></h1>
+        </p>
+
+        <article></article> 
+        <section></section> 
+
+        <p>Paragraph 1</p> 
+
+        <h3>Heading 1</h3> 
+
+        <article>Article 1</article> 
+
+        <section>Section 1</section> 
+
+        <p><a href=""></a></p> <!-- Nesting Tags --> 
+
+        <p></p> 
+        <a href=""></a> 
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, dolorum!</p> 
+
+        <!-- 
+            id element identifies elements uniquely 
+            class is a parent level entity, multiple elements can exists, grouping is there 
+        --> 
+
+        <p id="id1"></p>
+        <p class="class1"></p>
+        
+        <!-- p>ul>li*3 -->
+        <p>
+            <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+            </ul>
+        </p>
+
+        <!-- p+article+section -->
+        <p></p>
+        <article></article>
+        <section></section>
+
+        <!-- section>p*3 -->
+        <section>
+            <p></p>
+            <p></p>
+            <p></p>
+        </section>
+
+        <!-- One table, indie it one row, indie it 5 data: table>tr>td*5 -->
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <!-- table>(tr>td*5)*2 -->
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <!-- header+main+footer -->
+        <header></header>
+        <main></main>
+        <footer></footer>
+
+        <!-- section>ul>li*2+gooter -->
+        <section>
+            <ul>
+                <li></li>
+                <li></li>
+                <footer></footer>
+            </ul>
+        </section>
+
+        <!-- div tag: generic container tag for wrapping or as a container -->
+
+        <!-- div>article>ul>li{A}+li{B}+p{Hello} -->
+        <div>
+            <article>
+                <ul>
+                    <li>A</li>
+                    <li>B</li>
+                    <p>Hello</p>
+                </ul>
+            </article>
+        </div>
+
+        
+        <!-- 
+            Block Element: 
+                Block Elements are those elements which are created int he next line
+                Cover all the sapce from left to right
+            Inline Element:
+                Doesn't Come in next line
+                Cover space according to the content
+        -->
+
+        <!-- To create div with class container: .container -->
+        <!-- This whole segment will be called container -->
+        <div class="container">
+            <section>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <footer></footer>
+                </ul>
+            </section>
+        </div>
+
+        <!-- This whole segment will be called wrapper -->
+        <div class="wrapper">
+            <header></header>
+            <main></main>
+            <footer></footer>
+        </div>
+
+        <!-- To check if this is block or inline, just fill bg color -->
+        <div style="background-color: aqua;">This is my first div</div> <!-- Block Element -->
+        <div style="background-color: aqua;">This is my second div</div> <!-- Comes in different line -->
+        <span style="background-color: yellow;"> This is my first span tag</span> <!-- Inline Element -->
+        <span style="background-color: yellow;"> This is my second span tag</span> <!-- It will come just after the 1st span tag leaving a space, comes in same line -->
+
+        <p style="background-color: greenyellow;">This is the first paragraph</p> <!-- Block Element -->
+        <p style="background-color: greenyellow;">This is the second paragraph</p> <!-- Block Element -->
+
+        <!-- div doesn't carry any semantic -->
+
+        <!-- 
+            Can we convert a block element to inline element or inline element to block element?
+            
+            Use display: inline; 
+            Use display: block;
+        -->
+
+        <p style="background-color: red; display: inline;">Converted to inline</p>
+        <div style="background-color: blue; display: inline;">Converted to inline</div>
+        <span style="background-color: aquamarine; display: block;">Converted to block</span>
+
+
+        <!-- List -->
+        <!-- ul>(li>p>a)*7 -->
+        <ul>
+            <li>
+                <p><a href="">A</a></p>
+            </li>
+            <li>
+                <p><a href="">B</a></p>
+            </li>
+            <li>
+                <p><a href="">C</a></p>
+            </li>
+            <li>
+                <p><a href="">D</a></p>
+            </li>
+            <li>
+                <p><a href="">E</a></p>
+            </li>
+            <li>
+                <p><a href="">F</a></p>
+            </li>
+            <li>
+                <p><a href="https://www.google.com">G</a></p>
+            </li>
+        </ul>
+
+
+        <!-- nav>ul>(li>a)*4 -->
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Login</a></li>
+            </ul>
+        </nav>
+
+        <!-- Find out how to bring side by side? -->
+        <nav style="background-color: aqua;">
+            <ul style="display: flex;">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Login</a></li>
+            </ul>
+        </nav>
+
+        <!-- How to remove dots or numbers in the list? -->
+        <nav style="background-color: aqua;">
+            <ul style="display: flex; list-style-type: none;">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Login</a></li>
+            </ul>
+        </nav>
+
+        <a href="https://www.thecodehelp.in">CodeHelp</a>
+        
+        <!-- To mail -->
+        <a href="mailto: abc@gmail.com">Email</a> <!-- Will take you to default email app-->
+        <!-- To Call -->
+        <a href="tel:+910000000000">Call Us</a>
+
+
+        <!-- 
+            Learned New Thing
+
+            I have to two list.
+            A and B are in same list as well as C and D are in same list. 
+            I want to display them in side by side like this.
+            
+            A C
+            B D
+        -->
+
+        <!-- I used -->
+        <nav style="display:flex">
+            <ul>
+                <li>A</li>
+                <li>B</li>
+            </ul>
+            <ul>
+                <li>C</li>
+                <li>D</li>
+            </ul>
+        </nav>
+
+        <!-- On Stack Overflow -->
+        <nav>
+            <ul style="float: left;">
+                <li>A</li>
+                <li>B</li>
+            </ul>
+            <ul style="float: left;">
+                <li>C</li>
+                <li>D</li>
+            </ul>
+        </nav>
+
+    </body>
+</html>
+
+<!-- 
+    > (for nesting)
+    + (for next tag without nesting)
+    #(for id attribute)
+    . (for class attribute)
+    {}( To write some content)
+-->
