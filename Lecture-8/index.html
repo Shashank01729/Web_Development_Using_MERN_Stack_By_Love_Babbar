@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 
+            HTML Forms: It is a type of structure to collect data from user input 
+
+            Form Elements
+
+            Tags:
+                form: To create html form for user input
+
+                input: It can be display in many forms on the ui (text box, radio buttons, check boxes, calendar, etc)
+                
+                label: To given name when inserting, create label, screen reader, for attribute must be there inside the label
+                    for attribute value should be same as input id attribute value, for mapping/linking
+                
+                select: We can create dropdown menu
+
+                option: To create options for those dropdown menu
+
+                textarea: To take multiline input
+
+                button
+
+                fieldset: It is used to group many elements
+                        So we can put related data together
+                        Like male, female and others, we can put them in a fieldset
+                        So we can give them caption altogether
+
+                legend: to give the caption we use legend
+        -->
+
+            <!-- FORM-1 -->
+            <form>
+                <label for="email">Enter Email ID:</label>
+                <input type="text" id="email">
+                <br><br>
+                <label for="password">Enter Password:</label>
+                <input type="text" id="password">
+                <br><br>
+                <input type="submit" value="Click Here">
+            </form>
+            
+            <br><hr>
+            <!-- Form-2 -->
+
+            <form>
+                <label for="name">Enter Name:</label>
+                <input type="text" id="name">
+                <br><br>
+                <input type="radio" id="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female">
+                <label for="female">Female</label>
+                <br><br>
+                <input type="checkbox" id="eng">
+                <label for="eng">English</label>
+                <input type="checkbox" id="hi">
+                <label for="hi">Hindi</label>
+                <br><br>
+                <label for="calendar">Choose Date:</label>
+                <input type="date" id="calendar">
+            </form>
+
+            <!-- 
+                Must specify for attribute.
+                We have to specify the type, since we are telling what we are making. What you wat to create depends upon type attribute.
+                Must specify id.
+                for attribute value = input id value (Attaching label with the input tag) 
+                can use name attribute in the input to give it a name.
+
+                When input type is submit, it means that all the data inside the form will get submitted somewhere.
+                Submit button is the listener. Data will go to server for processing.
+                Or we can use action attribute in the form to take action, how to submit, what to do with the data, etc.
+                Or can create our own button to do this samething.
+
+            -->
+
+            <br><hr>
+
+            <!-- Form-3 -->
+            <!-- Faded Text (Placeholder attribute): used to tell what to enter or to get more clarity-->
+            <form action="">
+                <label for="uname">Username:</label>
+                <input type="text" id="uname" placeholder="Enter your email here">
+                <br><br>
+                <label for="psswd">Enter Password:</label>
+                <input type="text" id="psswd" placeholder="Enter your password here">
+            </form>
+
+            <br><hr>
+
+            <!-- Form-4 -->
+            <!-- select, button, textarea -->
+            <form action="">
+                <label for="selector1">Choose Your Dish:</label>
+                <select name="dishes" id="selector1">
+                    <option value="maggie">Maggie</option>
+                    <option value="kurkure">Kurkure</option>
+                    <option value="lays">Lays</option>
+                </select>
+                <br><br>
+                <button>Main Hu Button</button>
+                <br><br>
+                <textarea name="textarea1" id="textarea1" cols="30" rows="10" placeholder="Enter Text Here..."></textarea>
+                <!-- If we write inside textarea, it will come pre written inside the textarea -->
+            </form>
+
+            <br><hr>
+
+            <!-- Form-5 -->
+            <!-- fieldset and legend -->
+
+            <form action="">
+                <fieldset>
+                    <legend>Choose Your Favourite Dish</legend>
+                    <label for="selector1">Choose Your Dish:</label>
+                    <select name="dishes" id="selector1">
+                        <option value="maggie">Maggie</option>
+                        <option value="kurkure">Kurkure</option>
+                        <option value="lays">Lays</option>
+                    </select>
+                    <br><br>
+                    <button>Main Hu Button</button>
+                    <br><br>
+                    <textarea name="textarea1" id="textarea1" cols="30" rows="10" placeholder="Enter Text Here..."></textarea>
+                </fieldset>
+            </form> 
+
+            <br><hr>
+
+            <!-- How to select multiple dropdowns in the menu? -->
+            <!-- Form-6 -->
+            <form action="">
+                <label for="selector1">Choose Your Dish:</label>
+                <br>
+                <select name="dishes" id="selector1" multiple>
+                    <option value="maggie">Maggie</option>
+                    <option value="kurkure">Kurkure</option>
+                    <option value="lays">Lays</option>
+                    <option value="coke">Coke</option>
+                </select>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+            <p>Hold down the ctrl + windows button to select multiple options</p>
+            <br><hr>
+
+            <!-- Input Types: textfield, button, radio button, checkbox, file select and upload, image button, password field, datepicker, etc-->
+            <!-- 
+                <input type="button">
+                <input type="checkbox">
+                <input type="color">
+                <input type="date">
+                <input type="datetime-local">
+                <input type="email">
+                <input type="file">
+                <input type="hidden">
+                <input type="image">
+                <input type="month">
+                <input type="number">
+                <input type="password">
+                <input type="radio">
+                <input type="range">
+                <input type="reset">
+                <input type="search">
+                <input type="submit">
+                <input type="tel">
+                <input type="text"> (default value)
+                <input type="time">
+                <input type="url">
+                <input type="week">
+            -->
+
+            <!-- Multiple Radio Buttons, but have to select one. What changes to make in code? -->
+            <!-- Form-7 -->
+            <form action="">
+                <label for="radio1">RadioButton1</label>
+                <input type="radio" id="radio1" name="buttons" value="RadioButton1">
+                <br><br>
+                <label for="radio2">RadioButton2</label>
+                <input type="radio" id="radio2" name="buttons" value="RadioButton2">
+                <br><br>
+                <label for="radio3">RadioButton3</label>
+                <input type="radio" id="radio3" name="buttons" value="RadioButton3">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+            <!-- 
+                1) Give id, name and value
+                2) Id should be differnet
+                3) Name should be same
+                4) Can give label name to the value
+             -->
+            <br><hr>
+
+
+            <!-- Form-8 -->
+            <!-- file, image button, password(this time hidden) -->
+            <form action="">
+                <label for="file1">Upload:</label>
+                <input type="file" id="file1">
+                <br><br>
+                <input type="image" name="img1" id="img1" alt="Download" src="1.png" height="25px">
+                <br><br>
+                <label for="pass">Password:</label>
+                <input type="password" name="password1" id="pass" placeholder="Enter Password Here">
+            </form>
+
+            <br><hr>
+    </body>
+</html>
