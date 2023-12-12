@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Form-1 -->
+    <h2><strong>Event Registration</strong></h2>
+    <form action="">
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email_id">Email:</label>
+        <br>
+        <input type="email" id="email_id" name="email_id">
+        <br>
+        <label for="phone">Phone:</label>
+        <br>
+        <input type="tel" id="phone" name="phone">
+        <br>
+        <label for="occupation_type">Occupation:</label>
+        <br>
+        <select name="occupation_type" id="occupation_type">
+            <option value="student">Student</option>
+            <option value="professional">Professional</option>
+            <option value="other">Other</option>
+        </select>
+        <fieldset>
+            <legend>Topics Of Interest</legend>
+            <input type="checkbox" id="html" name="checkbox">
+            <br>
+            <label for="html">HTML</label>
+            <br>
+            <input type="checkbox" id="css" name="checkbox">
+            <br>
+            <label for="css">CSS</label>
+            <br>
+            <input type="checkbox" id="js" name="checkbox">
+            <br>
+            <label for="js">JavaScript</label>
+        </fieldset>
+        <br>
+        <label for="comments">Comments:</label>
+        <br>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+        <!-- <button>Register</button> -->
+        <input type="submit" value="Register">
+    </form>
+
+    <hr><br>
+
+    <!-- Form-2 -->
+    <h2><strong>Job Application</strong></h2>
+    <form action="">
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email_id">Email:</label>
+        <br>
+        <input type="email" id="email_id" name="email_id">
+        <br>
+        <label for="phone">Phone:</label>
+        <br>
+        <input type="tel" id="phone" name="phone">
+        <br><br>
+        <label for="resume">Resume</label>
+        <br>
+        <input type="file" id="resume" name="resume">
+        <br><br>
+        <label for="experience">Experience(years):</label>
+        <br>
+        <input type="number" id="experience" name="counter" min="0" max="50">
+        <br><br>
+        <fieldset>
+            <legend>Skills:</legend>
+            <input type="checkbox" id="html" name="checkbox">
+            <br>
+            <label for="html">HTML</label>
+            <br>
+            <input type="checkbox" id="css" name="checkbox">
+            <br>
+            <label for="css">CSS</label>
+            <br>
+            <input type="checkbox" id="js" name="checkbox">
+            <br>
+            <label for="js">JavaScript</label>
+        </fieldset>
+        <br>
+        <label for="highest_education">Highest Education:</label>
+        <select name="highest_education" id="highest_education">
+            <option value="highschool">HighSchool</option>
+            <option value="associate's_degree">Associate's Degree</option>
+            <option value="bachelor's_degree">Bachelor's Degree</option>
+            <option value="master's_degree">Master's Degree</option>
+            <option value="phd">PhD</option>
+        </select>
+        <br><br>
+        <label for="availability">Availability</label>
+        <br>
+        <input type="radio" id="full_time" name="availability">
+        <br>
+        <label for="full_time">Full-time</label>
+        <br>
+        <input type="radio" id="part_time" name="availability">
+        <br>
+        <label for="part_time">Part-time</label>
+        <br><br>    
+        <label for="Additional_Comments">Additional Comments:</label>
+        <br>
+        <textarea name="Additional_Comments" id="Additional_Comments" cols="30" rows="10"></textarea>
+        <input type="submit" value="Submit Appplication">
+    </form>
+
+    <hr><br>
+
+    <!-- Form-3 -->
+    <h2><strong>Complex Form</strong></h2>
+    <form action="">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name</label>
+            <br>
+            <input type="text" id="name" name="name">
+            <br>
+            <label for="email_id">Email</label>
+            <br>
+            <input type="email" id="email_id" name="email_id">
+            <br>
+            <label for="phone">Phone</label>
+            <br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            <br><br>
+            <label for="DOB">Date of Birth</label>
+            <br>
+            <input type="date" id="DOB" name="DOB">
+            <br><br>
+            <label for="gender">Gender:</label>                 <!-- we can use span tag instead of p tag for same line, and for same line in p we use diaply inline-->
+            <input type="radio" id="male" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female">Female</label>
+            <br><br>
+            <label for="country">Country</label>
+            <br>
+            <select name="country" id="country">
+                <option value="IN">India</option>
+                <option value="RUS">Russia</option>
+                <option value="USA">United States</option>
+                <option value="PA">Paris</option>
+                <option value="ENG">England</option>
+            </select>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Address</legend>
+                <label for="street">Street</label>
+                <br>
+                <input type="text" id="street" name="street">
+                <br>
+                <label for="city">City</label>
+                <br>
+                <input type="text" id="city" name="city">
+                <br>
+                <label for="state">State</label>
+                <br>
+                <input type="text" id="state" name="state">
+                <br>
+                <label for="zip_code">Zip Code</label>
+                <br>
+                <input type="text" id="zip_code" name="zip_code">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Other Information</legend>
+            <label for="info">Comments</label>
+            <br>
+            <textarea name="info" id="info" cols="30" rows="10"></textarea>
+            <label for="TOS">I agree to the terms of service</label>
+            <input type="checkbox">
+        </fieldset>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- HW: Create a form, by default value in dropdown, but it is only for show, not in the list -->
+    <!-- Form-4 -->
+
+    <hr><br>
+    <h2><strong>Homework Form</strong></h2>
+    <form action="">
+        <label for="username">Username</label>
+        <br>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="psswd">Password</label>
+        <br>
+        <input type="password" id="psswd" name="psswd">
+        <br>
+        <label for="city_of_employement">City Of Employement</label>
+        <br>
+        <input type="text" id="city_of_employement" name="city_of_employement">
+        <br>
+        <label for="webserver">Web Server</label>
+        <select name="webserver" id="webserver">
+            <!-- We can use disabled selected and giving no value -->
+            <option value="" disabled selected>--Choose a Server--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        <br>
+    </form>
+
+
+
+</body>
+</html>
+
+<!-- 
+    patttern inside input tel ? 
+
+    It is used for restriction, to conform that number is entered in this way only
+    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+
+    e.g: 123-456-7890
+-->
