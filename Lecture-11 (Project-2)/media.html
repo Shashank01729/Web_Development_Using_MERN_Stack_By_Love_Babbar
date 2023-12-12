@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Media in HTML -->
+    <img src="logo.svg" alt="Logo_Image" height="50px" width="100px">
+    
+    <!-- 
+        Lazy Loading? And why it is good? 
+
+        When you include the attribute "loading=lazy" in an image tag, it tells the browser to delay the 
+        loading of the image until it is about to come into the user's viewport, or until the user starts 
+        scrolling towards it. This means that images located further down the page or outside the initial 
+        viewport are not loaded immediately when the page loads. Instead, they are loaded dynamically as the 
+        user scrolls or interacts with the page.
+    -->
+
+
+    <br>
+
+    <audio src="Doremon Stand By Me Song Niji Hindi Cover (1) [vocals].mp3" controls></audio>
+    <!-- To make audio file visible we use controls -->
+
+    <br>
+
+    <!-- 
+        Second way to add audio.
+        If we write only <audio controls><audio>, then we get an empty audio with all controls whiten out
+    -->
+    <audio  controls>
+        <source src="Doremon Stand By Me Song Niji Hindi Cover (1) [vocals].mp3" type="audio/mp3">
+    </audio>
+
+    <br>
+
+    <video src="Doremon Stand By Me Song Niji Hindi Cover (1).mp4" controls height="400px" autoplay></video>
+    <!-- use autoplay for autoplay when website load -->
+    <br>
+
+    <!-- 
+        Another method to add video.
+        If we write only <video controls><video>, then we get an empty video with all controls whiten out
+    -->
+    <video controls height="400px">
+        <source src="Doremon Stand By Me Song Niji Hindi Cover (1).mp4" type="video/mp4">
+    </video>
+
+    <br>
+
+    <!-- iframe - inline frame element-->
+    <iframe src="../Lecture-10 (Project-1)/homework.html" frameborder="0" height="200px" width="500px"></iframe>
+
+    <!-- Homework - add map -->
+
+    <!-- Adding youtube videos -->
+    <iframe src="https://www.youtube.com/watch?v=Az5XPYw16Eg"></iframe>
+    <!-- 
+        It will give www.youtube.com refused to connect 
+        It is because there is a format, remove watch from the link and write embed, 
+        remove ?v= and replace it with /
+    -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fb4rgYbi84c?si=a9Oxx3B9Caf5VZ9c&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <!-- We can use autoplay true or false and also with mute also -->
+    <!-- 
+        for autoplay add &autoplay=1 in the src
+        for mute, &mute=1
+
+        In iframe we can also use allow attribute, allow="autoplay"
+    -->
+    
+</body>
+</html>
+
+<!-- 
+    There is delay in rendering videos. why?
+    And how can we reduce it?
+    Is it because of my network connection?
+
+    To reduce it we can use loading="lazy".
+    If the video came from same source it would increase rendering speed.
+-->
