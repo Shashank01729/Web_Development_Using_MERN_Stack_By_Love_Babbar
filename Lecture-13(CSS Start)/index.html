@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Internal CSS -->
+    <style>
+        h1{
+            background-color: green;
+        }
+
+        p{
+            background-color: red;
+        }
+        /* No clash in 2nd and 3rd p, but for 1st p inline css wins */
+
+
+        h2{
+            background-color: red !important;
+        }
+        /* To use the internal css and there is clash between inline and internal, we use !important */
+
+        h3{
+            background-color: aquamarine;
+        }
+        /* Clash between internal css and external css, internal wins (since it is close to the element) */
+
+        h4{
+            background-color: aquamarine;
+        }
+
+
+        /* Element Selector */
+        h5{
+            background-color: brown;
+        }
+
+        /* ID Selector */
+        #article1{
+            background-color: bisque;
+        }
+
+
+        /* Class Selector */
+        .para_class{
+            background-color: blueviolet;
+            background-color: red;
+            background-color: rgb(215, 26, 224); /* This will be taken*/
+        }
+
+        /* Group Selector */
+        nav,footer{
+            width: 500px;
+            color: red;
+        }
+        
+
+        /* We have given para_class to section and h6, but want to select only h6 */
+        h6.para_class{
+            background-color: black;
+            color: red ;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        Used for styling
+        Change in appearance
+
+        Cascading - on a particular tag, if multiple things are given in the same property then which would it take?
+        
+        Factors on which css depends:
+            Origin and importance.
+            Specificity.
+            Order in the file.
+            Inheritance.
+    -->
+
+    <!-- 
+        Three different ways to add css:
+            Inline (Shouldn't use most of the time because it creates many confusions, more complex code then readability will decrease)
+            Internal css (using style tag inside head tag)
+            External css (Create css file then link it with the html file)
+    -->
+
+    
+    <h1>Welcome to CodeHelp</h1>
+    
+    <!-- Inline CSS -->
+    <p style="background-color: yellow;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Culpa esse vel nisi voluptates maiores natus ducimus itaque saepe nesciunt aliquid.
+    </p>
+    <p style="color: aqua;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda eveniet doloremque, molestias voluptate, 
+        pariatur quae, velit optio sunt tempora doloribus aliquid quas obcaecati veritatis corporis error? Laboriosam non omnis illo!
+    </p>
+
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores soluta amet voluptatem cupiditate sed, natus 
+        voluptas doloribus suscipit quidem tempora eos ipsam iure. Laborum eaque incidunt sunt nisi vitae itaque, 
+        inventore mollitia corporis, aliquid ab, nihil numquam perferendis! Doloribus obcaecati dignissimos aperiam 
+        dicta doloremque consequatur. Quas libero nihil nulla expedita!
+    </p>
+
+    <h2 style="background-color: aqua;">Hello</h2>
+
+    <h3>Hi</h3>
+
+    <h4>Shashank</h4>
+
+
+    <!-- 
+        Selectors : By this we can target any html element and style it.
+
+        Element Selector (using p, a, article, section, etc) => Here we are using name of tags
+        ID Selector
+        Class Selector
+        Group Selector
+    -->
+
+    <h5>Welcome to CodeHelp 2.0</h5>
+    <h5>Hey Fellas!</h5>
+    <h5>Shashank Here!</h5>
+
+    <article id="article1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Deserunt repellat obcaecati laudantium, tenetur amet hic delectus aspernatur quae excepturi necessitatibus!
+    </article>
+
+    <section class="para_class">
+        This is section.
+    </section>
+    
+    <h6 class="para_class">
+        This is h6.
+    </h6>
+
+    <nav>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse amet, obcaecati eius neque ut modi 
+        explicabo architecto distinctio error possimus vitae. Dolore at minus ad numquam beatae non modi vero,
+        eveniet accusantium rem laboriosam in dolorum culpa consequuntur. Quam doloribus fuga nulla nobis non 
+        molestias nam repellendus obcaecati distinctio magni!
+    </nav>
+
+    <br>
+
+    <footer class="para">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias at tempore soluta. Veniam dolore tempore 
+        soluta ipsa numquam omnis quidem eligendi odit quam ipsum dolores ducimus asperiores provident, iure laborum 
+        vel? Asperiores reprehenderit labore ducimus recusandae nemo tempore vel! Porro provident magni sed excepturi 
+        quas doloremque modi aut voluptas nulla! Optio animi, excepturi sit vero nisi provident sint qui alias amet eos
+        aperiam quisquam ab. Laboriosam sed exercitationem aperiam earum rem. Asperiores ipsa dolore quam quia 
+        blanditiis alias perspiciatis modi minus, impedit laborum quibusdam nobis vero distinctio 
+        dolores et, similique cumque. Debitis illum adipisci atque ex beatae, nobis cum perferendis.
+    </footer>
+
+
+</body>
+</html>
+
+<!-- 
+    h1{background-color: green;}
+
+    Here h1 is the selector (target element on which styling is going to be applied)
+    left side (background-color) is the property and right side (green) is the value
+-->
