@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            background-color: aquamarine;
+
+            /* Adding border */
+            /* 
+            border-style: solid;
+            border-width: 2px;
+            border-color: brown; 
+            */
+
+            /* Short hand notation */
+            border: solid brown 2px; 
+
+            /* To make corners rounded */
+            border-radius: 10px; 
+
+            /* If you want to make one corner rounded */
+            border-top-left-radius: 100px;
+
+            /* If you want to add border only on a particular side then, (for eg on top) */
+            border-top: dashed blue 5px;
+            border-right: dotted red 5px;
+
+            width: 350px;
+            height: 100px;
+            text-align: center;
+        }
+
+        span{
+            background-color: aquamarine;
+            border: solid black 2px;
+            border-radius: 5px;
+            width: 350px;
+            height: 100px;
+            /*
+                Why applying height and width doesn't change anything?
+
+                On span tag height and width doesn't apply because it is an inline element,
+                it takes space according to the content written in it. 
+            */
+        }
+
+        .firstpara{
+            background-color: blanchedalmond;
+            border: solid black 2px;
+            border-radius: 10px;
+            width: 350px;
+
+            padding: 90px;
+            /* 
+                The space between content and border is called padding 
+                This is shorthand notation: padding: 90px;, by this in all 4 direction padding is applied
+                padding can be 0
+
+            */
+
+            margin: 90px;
+            /* 
+                The gap between two boxes is called margin  
+                This is shorthand notation: margin: 90px;, by this in all 4 direction margin is applied
+            */
+
+        }
+
+        .secondpara{
+            background-color: beige;
+            border: solid black 2px;
+            border-radius: 10px;
+            width: 350px;
+
+            /* 
+            padding-left: 20px;
+            padding-top: 30px;
+            padding-bottom: 40px;
+            padding-right: 50px; 
+            */
+
+            /* 
+                Short Hand  
+                padding: top right bottom left
+            */
+            /* padding: 30px 50px 40px 20px; */
+
+            /* 
+                Another Method 
+                padding: horizontal vertical;
+            */
+            padding: 20px 40px;
+            
+        }
+
+        .thirdpara{
+            background-color: yellow;
+            border: solid black 2px;
+            border-radius: 10px;
+            width: 350px;
+
+            /* margin: 40px; */
+
+            /* 
+            margin-left: 20px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            margin-right: 50px; 
+            */
+
+            /* 
+                Can we use shorthand? if yes, practice it.
+
+                Yes We can use shorthand, just like we did in padding.
+                margin: 10px 20px 30px 40px; 
+            */
+
+            margin: 10px 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Welcome to CodeHelp
+    </h1>
+    <span>
+        Welcome to babbar Web Dev Course
+    </span>
+    <p class="firstpara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Deserunt quas expedita tempora adipisci exercitationem debitis totam dolorem consequuntur eaque aspernatur.
+    </p>
+    <p class="secondpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio hic magnam illum quis nihil 
+        veritatis doloribus magni praesentium, explicabo, autem dolorum quae consectetur maxime in dicta 
+        reprehenderit beatae amet? Animi et quo distinctio qui perspiciatis similique vero praesentium ullam earum!
+    </p>
+    <p class="thirdpara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, atque repellendus. 
+        Asperiores quisquam facere dolor sapiente quaerat quibusdam. Sapiente voluptate reprehenderit 
+        possimus nulla ut non eveniet veritatis cumque corrupti quisquam?
+    </p>
+
+    <!-- 
+        CSS BOX MODEL
+        https://www.w3schools.com/css/css_boxmodel.asp
+
+        Everything is rendered in a rectangular box on the browser window
+
+        Content - The content of the box, where text and images appear
+        Padding - Clears an area around the content. The padding is transparent
+        Border - A border that goes around the padding and content
+        Margin - Clears an area outside the border. The margin is transparent
+
+        div{
+            width: 300px;
+            border: 15px solid green;
+            padding: 50px;
+            margin: 20px;
+        }
+    -->
+</body>
+</html>
