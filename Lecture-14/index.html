@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts and Colors</title>
+
+    <!-- We have imported the external font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <style>
+        p{
+            font-style: italic;
+            font-size: 20px;
+
+            /* 
+                A pixel is the smallest unit that constructs a digital image or graphic. 
+                Pixels are combined to form a complete image, video, text, or any visible thing on a computer display. 
+                Pixels are also a unit of measurement commonly used in graphic and web design, abbreviated as "px". 
+                One pixel is equivalent to roughly 1⁄96 inch (0.26 mm). This measurement is used to make sure a given 
+                element will display as the same size no matter what screen resolution views it 
+            */
+
+            /* 
+                There are 2 types of pixel: physical and digital. (Upper one is physical) 
+            */
+
+            font-family: cursive;
+            font-weight: 900; /*Gets thick*/
+            line-height: 40px; /* Gap between line*/
+
+            /* 
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                If due to some reason 1st one is not available, use the 2nd one and so on (This system is fallback system)
+                Web save font: already available in the browser universally
+            */
+
+            /* 
+                If want to use own font family, then use google fonts
+                https://fonts.google.com/
+
+                How to use external fonts?
+
+                Go on the website.
+                Select the font you prefer.
+                Copy the link tag and paste it.
+                Copy the font family and paste it.
+                It is ready to use.
+            */
+            font-family: 'Oswald', sans-serif;
+        }
+
+        #firstpara{
+            background-color: aqua;
+            color: red;
+        }
+
+        #secondpara{
+            background-color: rgb(34, 186, 228);
+            /* max 255,255,255 */
+        }
+
+        #thirdpara{
+            /* 
+                background-color: rgba(106, 234, 21, 0); 
+                No color coming since alpha value is 0, alpha value is for transparency
+            */
+            background-color: rgba(106, 234, 21, 0.735);
+        }
+
+        .firstclass{
+            /* hexadecimal color picker */
+            background-color: #ffabff;
+            /* starting two denotes r component, next two g and next two b */
+
+            background-color: #abb2ff8b;
+            /* two more added, which denotes transparency and opacity */
+        }
+
+        .secondclass{
+            /* 
+                HSL : Hue, Saturation and Lightness
+
+                Hue is a degree on the color wheel from 0 to 360. 0 (or 360) is red, 120 is green, 240 is blue.
+
+                Saturation can be described as the intensity of a color. It is a percentage value from 0% to 100%.
+                100% is full color, no shades of gray.
+                50% is 50% gray, but you can still see the color.
+                0% is completely gray; you can no longer see the color.
+
+                The lightness of a color can be described as how much light you want to give the color, 
+                where 0% means no light (dark), 50% means 50% light (neither dark nor light), and 100% means full light.
+
+
+                HSLA (alpha)
+
+                HSLA color values are an extension of HSL color values, with an Alpha channel - which specifies the opacity for a color.
+                An HSLA color value is specified with:
+                hsla(hue, saturation, lightness, alpha)
+                The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all):
+            */
+
+            /* https://www.w3schools.com/colors/colors_hsl.asp */
+
+            background-color: hsl(281, 98%, 71%);
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to CodeHelp</h2>
+    <p id="firstpara">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem error suscipit consequatur qui 
+        voluptate provident magni a deserunt laboriosam recusandae.
+    </p>
+    <p id="secondpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste impedit nemo necessitatibus 
+        a sint! Incidunt assumenda tenetur minima fuga harum. Voluptatem nihil tempora illo maxime 
+        explicabo corrupti, pariatur aliquam quaerat soluta rem blanditiis similique adipisci iste rerum, 
+        architecto, tempore eaque!
+    </p>
+    <p id="thirdpara">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, hic. Debitis eum officia doloremque omnis 
+        iure dolores dolorum quod quam quaerat a, provident deserunt pariatur non? Quia eveniet praesentium atque?
+    </p>
+    <p class="firstclass">
+        Hello
+    </p>
+    <p class="secondclass">
+        Hey Fellas, Shashank Here!
+    </p>
+</body>
+</html>
+
+<!-- 
+    Developer Tools
+
+    Inspect website
+    element
+    We can get the whole html document by writitng document in the console
+    In source the whole document will be there, the fonts that we imported, etc
+    In network, we can make requests
+    performance
+    memory
+    allocation
+-->
