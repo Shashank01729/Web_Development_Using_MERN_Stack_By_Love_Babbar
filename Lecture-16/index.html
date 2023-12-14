@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            /* div{
+                border: solid red 1px;
+                width: 300px;
+                height: 300px;
+                margin: 25px;
+                padding: 50px;
+            } */
+
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            .box{
+                width: 300px;
+                height: 300px;
+                border: solid black 1px;
+                padding: 50px;
+                /* Impact on box size, without box-sizing: border-box;  */
+            }
+
+
+            .box1{
+                width: 300px;
+                height: 300px;
+                border: solid black 1px;
+                padding: 50px;
+                box-sizing: border-box;
+                /* No change in the dimension of actual box, only content shrinks */
+            }
+
+            .span1{
+                border: solid red 1px;
+                height: 400px;
+                width: 400px;
+                margin: 10px;
+                padding: 10px;
+            }
+            
+            .span2{
+                border: solid red 1px;
+                height: 400px;
+                width: 400px;
+                margin: 10px;
+                padding: 10px;
+                display: block;
+            }
+
+            .div1{
+                border: solid red 1px;
+                height: 100px;
+                width: 400px;
+                display: inline ;
+            }
+
+            #id1{
+                border: solid blue 1px;
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+            }
+
+            #id2{
+                border: solid rgb(61, 234, 18) 1px;
+                height: 100px;
+                width: 100px; 
+                display: inline-block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- 
+            Block Elements: div, p, h1, etc.
+
+            Properties:
+                1) Block element comes(renders) on new line
+                2) The default width is from extreme left of view point to extreme right 
+                3) It takes custom height and width
+                4) It can take also custom padding and margin
+        -->
+
+        <!-- 
+            HW: Read about 10 different block elements in html 
+            
+                <address>
+                <article>
+                <aside>
+                <dl>
+                <dt>
+                <fieldset>
+                <footer>
+                <form>
+                <h1>-<h6>
+                <header>
+                <hr>
+                <li>
+                <main>
+                <nav>
+                <noscript>
+                <ol>
+                <pre>
+                <section>
+                <table>
+                <tfoot>
+                <ul>
+                <video>
+        -->
+
+        <!-- 
+            <div>
+                Welcome to CodeHelp
+            </div>
+
+            <div>
+                Welcome to CodeHelp 2.0
+            </div> 
+        -->
+
+        <!-- When box-sizing: border-box; then the box can't retains its actual size, it expands -->
+        <div class="box">
+            SHASHANK KUMAR PANDEY
+        </div>
+
+        <br>
+
+        <!-- When box-sizing: border-box; then the box retains its actual size -->
+        <div class="box1">
+            SHASHANK KUMAR PANDEY
+        </div>
+
+        <br>
+
+        <!-- 
+            Inline Elements: a, span, , etc.
+
+            Properties:
+                1) They try to come(render) in same line, if space not available then go to next line 
+                2) By default its width is equal to the width of the content
+                3) Can't set custom height and width
+                4) Can't set custom margin (Only horizontal margin, there is no vertical margin (only in left right))
+                5) Padding is visible here
+        -->
+
+        <span class="span1">Hey Fellas, Shashank Here</span>
+        <span class="span1">Hey Fellas, Shashank Here</span>
+
+        <br><br>
+        <!-- 
+            Can we convert span to block element?
+            Yes, by display: block;
+
+            After doing this, custom height, width, margin will work
+        -->
+
+        <span class="span2">Hey Fellas, Shashank Here</span>
+        <span class="span2">Hey Fellas, Shashank Here</span>
+
+        <!-- If we set display: inline; then content width will come, if we give custom then it will not work -->
+        <div class="div1">
+            Hey Fellas, Shashank Here
+        </div>
+
+        <!-- 
+            Is there something which have mixture of both?
+            
+            Yes, combination of both exists.
+            inline-block
+
+            It behaves as inline, but we can give custom width and custom height
+        -->
+
+        <br><br>
+        
+        <!-- Comes in same line, but custom height, width, margin, padding can be added -->
+        <span id="id1">
+            SHASHANK
+        </span>
+        <span id="id2">
+            SHASHANK
+        </span>
+    </body>
+</html>
+
+<!-- https://www.w3schools.com/html/html_blocks.asp -->
