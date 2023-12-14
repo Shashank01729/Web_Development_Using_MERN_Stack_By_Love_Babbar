@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Position Property</title>
+    </head>
+    <style>
+        img{
+            margin-left: 10px;
+            /* 
+                By default static position property is applied.
+                If tried to apply top, left, bottom, right then there will be no effect.
+                And also can't mention z-index.
+            */
+        }
+
+        div{
+            border: solid black 1px;
+        }
+
+        .img2{
+            /* STATIC */
+            /* top: 100px; will not work on static */
+
+            /* RELATIVE */
+            /* 
+            position: relative;
+            top: 100px; 
+            left: 100px;  
+            */
+
+            /* top: 100px; v To move down 100px */
+            /* left: 100px; To move right 100px */
+
+            /* ABSOLUTE */
+            /* 
+            position: absolute; 
+            top: 100px; 
+            */
+            /* img2 is there, but the gap which was there in relative is not maintained */
+            /* img2 didn't disappeared, it is below img3 because the gap is not maintained */
+            
+            /* FIXED */
+        }
+
+        .container{
+            position: relative;
+            height: 8000px;
+            background-color: beige;
+        }
+
+        .img4{
+            position: fixed;
+        }
+
+        .img3{
+            /* position: sticky; will not work if only this written */
+            position: sticky;
+            top: 100px;
+
+            /* 
+            It will be sticky until it is inside its parent container 
+            but fixed image is fixed inside the window 
+            */
+        }
+
+        .box{
+            background-color: aquamarine;
+            height: 5000px;
+        }
+
+    </style>
+    <body>
+        <!-- 
+            Positioning Value: abs, fixed, sticky, relative, static, etc. 
+            By default: static (Can't apply z-index)
+        -->
+
+        <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/position -->
+
+
+        <div class="container">
+            <img src="1.jpeg" alt="1" class="img1" height="150px">
+            <img src="1.jpeg" alt="2" class="img2" height="150px">
+            <img src="1.jpeg" alt="3" class="img3" height="150px">
+            <img src="1.jpeg" alt="4" class="img4" height="150px">
+        </div>
+        <div class="box"></div>
+        <!-- img tag is inline block element -->
+
+        <!-- 
+            Static: top, left, right, bottom will not work on static
+
+            Relative: We are positioning object wrt current window 
+                      Gap/Space of the object is maintained, where it was moved from.
+                      We have 4 properties: top, left, right, bottom
+
+            Absolute: When we have to do overlapping        
+                      It is positioned relative to its closest positioned ancestor
+                      E.g: In case we moved img2, then it will move relatively according to div with class container
+                      It doesn't maintained gap, the gap will be removed on the spot when we mentioned absolute
+                      We have 4 properties: top, left, right, bottom
+            
+            Fixed: Will always remain fixed (E.g: Chatbot)
+
+            Sticky: it shows sticky behaviour inside its parent container
+        -->
+    </body>
+</html>
