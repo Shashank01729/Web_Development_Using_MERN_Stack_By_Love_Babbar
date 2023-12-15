@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Overflow</title>
+    </head>
+    <style>
+        .container{
+            border: solid black 1px;
+            height: 200px;
+            width: 500px;
+        }
+
+        .container1{
+            border: solid black 1px;
+            height: 200px;
+            width: 500px;
+            overflow: hidden;
+        }
+
+        .container2{
+            border: solid black 1px;
+            height: 200px;
+            width: 500px;
+            overflow: scroll;
+        }
+
+        .container3{
+            border: solid black 1px;
+            height: 200px;
+            width: 500px;
+            overflow: auto;
+        }
+    </style>
+    <body>
+        <!-- Content is overflowing -->
+        <div class="container">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum deleniti quaerat doloremque amet 
+            sequi inventore, porro optio, ea et perferendis numquam possimus! Alias quas sit velit quae officiis 
+            quod minima et atque ducimus? Sunt quos est explicabo qui sint. Dolorem tenetur asperiores quisquam 
+            incidunt rem fuga. Quos amet sequi nisi voluptas explicabo quisquam, tempore omnis voluptates dolorem 
+            quod distinctio! Quod quia saepe eligendi veritatis consectetur itaque perferendis excepturi enim iusto 
+            provident! Vel sit, eum distinctio velit et repellendus, asperiores numquam, perferendis soluta rerum 
+            rem natus? Fuga voluptatem saepe quasi libero sunt sed velit a obcaecati repudiandae, veritatis nam 
+            fugiat tenetur. Aperiam eligendi delectus blanditiis officia. Nihil, maiores nesciunt, explicabo culpa 
+            dignissimos distinctio quam laudantium eius voluptates maxime aut tenetur, at provident. Deleniti, eum.
+            Ab, sunt, iure quas dolorem rerum fugiat excepturi esse quidem tempora minus inventore eligendi 
+            aliquam ullam saepe commodi repudiandae sapiente iusto? Corporis, eveniet? Obcaecati deserunt atque 
+            sit sapiente aliquid nobis error debitis, soluta harum quae pariatur quaerat. Maiores modi ab 
+            perferendis debitis sapiente dignissimos magni nemo, voluptate expedita, eaque saepe! Placeat, 
+            repudiandae. Consequatur facilis esse blanditiis architecto expedita nulla consequuntur earum est, 
+            rerum dignissimos deserunt dicta illo vitae? Cupiditate ullam possimus iusto accusamus architecto 
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><hr>
+        <!-- If want to hide the part which is overflowing then we use overflow: hidden; -->
+        <div class="container1">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum deleniti quaerat doloremque amet 
+            sequi inventore, porro optio, ea et perferendis numquam possimus! Alias quas sit velit quae officiis 
+            quod minima et atque ducimus? Sunt quos est explicabo qui sint. Dolorem tenetur asperiores quisquam 
+            incidunt rem fuga. Quos amet sequi nisi voluptas explicabo quisquam, tempore omnis voluptates dolorem 
+            quod distinctio! Quod quia saepe eligendi veritatis consectetur itaque perferendis excepturi enim iusto 
+            provident! Vel sit, eum distinctio velit et repellendus, asperiores numquam, perferendis soluta rerum 
+            rem natus? Fuga voluptatem saepe quasi libero sunt sed velit a obcaecati repudiandae, veritatis nam 
+            fugiat tenetur. Aperiam eligendi delectus blanditiis officia. Nihil, maiores nesciunt, explicabo culpa 
+            dignissimos distinctio quam laudantium eius voluptates maxime aut tenetur, at provident. Deleniti, eum.
+            Ab, sunt, iure quas dolorem rerum fugiat excepturi esse quidem tempora minus inventore eligendi 
+            aliquam ullam saepe commodi repudiandae sapiente iusto? Corporis, eveniet? Obcaecati deserunt atque 
+            sit sapiente aliquid nobis error debitis, soluta harum quae pariatur quaerat. Maiores modi ab 
+            perferendis debitis sapiente dignissimos magni nemo, voluptate expedita, eaque saepe! Placeat, 
+            repudiandae. Consequatur facilis esse blanditiis architecto expedita nulla consequuntur earum est, 
+            rerum dignissimos deserunt dicta illo vitae? Cupiditate ullam possimus iusto accusamus architecto 
+        </div>
+
+        <br><hr>
+        <!-- scroll, in this there is both vertial and horizontal scroll -->
+        <div class="container2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum deleniti quaerat doloremque amet 
+            sequi inventore, porro optio, ea et perferendis numquam possimus! Alias quas sit velit quae officiis 
+            quod minima et atque ducimus? Sunt quos est explicabo qui sint. Dolorem tenetur asperiores quisquam 
+            incidunt rem fuga. Quos amet sequi nisi voluptas explicabo quisquam, tempore omnis voluptates dolorem 
+            quod distinctio! Quod quia saepe eligendi veritatis consectetur itaque perferendis excepturi enim iusto 
+            provident! Vel sit, eum distinctio velit et repellendus, asperiores numquam, perferendis soluta rerum 
+            rem natus? Fuga voluptatem saepe quasi libero sunt sed velit a obcaecati repudiandae, veritatis nam 
+            fugiat tenetur. Aperiam eligendi delectus blanditiis officia. Nihil, maiores nesciunt, explicabo culpa 
+            dignissimos distinctio quam laudantium eius voluptates maxime aut tenetur, at provident. Deleniti, eum.
+            Ab, sunt, iure quas dolorem rerum fugiat excepturi esse quidem tempora minus inventore eligendi 
+            aliquam ullam saepe commodi repudiandae sapiente iusto? Corporis, eveniet? Obcaecati deserunt atque 
+            sit sapiente aliquid nobis error debitis, soluta harum quae pariatur quaerat. Maiores modi ab 
+            perferendis debitis sapiente dignissimos magni nemo, voluptate expedita, eaque saepe! Placeat, 
+            repudiandae. Consequatur facilis esse blanditiis architecto expedita nulla consequuntur earum est, 
+            rerum dignissimos deserunt dicta illo vitae? Cupiditate ullam possimus iusto accusamus architecto 
+        </div>
+
+        <br><hr>
+        <!-- auto, only vertical scroll-->
+        <div class="container3">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum deleniti quaerat doloremque amet 
+            sequi inventore, porro optio, ea et perferendis numquam possimus! Alias quas sit velit quae officiis 
+            quod minima et atque ducimus? Sunt quos est explicabo qui sint. Dolorem tenetur asperiores quisquam 
+            incidunt rem fuga. Quos amet sequi nisi voluptas explicabo quisquam, tempore omnis voluptates dolorem 
+            quod distinctio! Quod quia saepe eligendi veritatis consectetur itaque perferendis excepturi enim iusto 
+            provident! Vel sit, eum distinctio velit et repellendus, asperiores numquam, perferendis soluta rerum 
+            rem natus? Fuga voluptatem saepe quasi libero sunt sed velit a obcaecati repudiandae, veritatis nam 
+            fugiat tenetur. Aperiam eligendi delectus blanditiis officia. Nihil, maiores nesciunt, explicabo culpa 
+            dignissimos distinctio quam laudantium eius voluptates maxime aut tenetur, at provident. Deleniti, eum.
+            Ab, sunt, iure quas dolorem rerum fugiat excepturi esse quidem tempora minus inventore eligendi 
+            aliquam ullam saepe commodi repudiandae sapiente iusto? Corporis, eveniet? Obcaecati deserunt atque 
+            sit sapiente aliquid nobis error debitis, soluta harum quae pariatur quaerat. Maiores modi ab 
+            perferendis debitis sapiente dignissimos magni nemo, voluptate expedita, eaque saepe! Placeat, 
+            repudiandae. Consequatur facilis esse blanditiis architecto expedita nulla consequuntur earum est, 
+            rerum dignissimos deserunt dicta illo vitae? Cupiditate ullam possimus iusto accusamus architecto 
+        </div>
+        
+    </body>
+</html>
