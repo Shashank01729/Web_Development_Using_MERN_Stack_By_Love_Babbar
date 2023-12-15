@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Size Units</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        border: solid red 2px;
+        width: 25%;
+        /* It is taking 25% of the immediate parent, for div it is body */
+    }
+
+    .parent{
+        border: solid black 1px;
+        background-color: beige;
+        width: 50%;
+    }
+
+    /* 20% of parent */
+    .child{
+        border: solid green 1px;
+        background-color: aqua;
+        width: 20%;
+    }
+
+    .container{
+        border: solid green 2px;
+        background-color: beige;
+        height: 100vh;
+        width: 50vw;
+    }
+
+    .box1{
+        border: solid black 1px;
+        font-size: 100px;
+    }
+
+    .wrapper{
+        font-size: 1em;  /* By default 16px and font also 16px */
+    }
+    /* 
+        1em is equal to the current font size. 
+        The default text size in browsers is 16px. 
+        So, the default size of 1em is 16px. 
+    */
+    .px{
+        width: 200px;
+    }
+
+    .vw{
+        width: 10vw;
+    }
+
+    .em{
+        width: 10em;
+    }
+
+    .container2{
+        font-size: 10px;
+    }
+
+    .box2{
+        font-size: 10em;
+    }
+
+    .firstpara{
+        border: solid black 1px;
+        font-size: 5rem;
+    }
+    /* 
+        By default 16px of root element 
+        5rem = 5*16px = 80px
+    */
+
+    .container3{
+        border: solid black 1px;
+        padding: 10px;
+    }
+
+    .box3{
+        padding: 10em;
+    }
+
+</style>
+<body>
+    <!-- px, %, vw(viewport width), vh(viewport height), rem, em -->
+    <!-- Size Unit
+            Absolute unit: 1cm is same everywhere, fixed length
+            Relative Unit: Depends on parent, like if child 50% of parent and parent is 100px then child will be 50px
+    -->
+
+    <!-- <div class="box">Welcome to CodeHelp</div> -->
+
+    <!-- <div class="parent">
+        <div class="child">
+            CHILD
+        </div>
+    </div> -->
+
+    <!-- <div class="container">Welcome to CodeHelp</div> -->
+
+    <!-- <div class="box1">
+        Shashank Kumar Pandey
+    </div> -->
+
+
+    <!-- RELATIVE UNITS -->
+    <!-- 
+        em depends upon
+
+        Font size of the parent, in the case of typographical properties like font-size, 
+        and font size of the element itself, in the case of other properties like width.
+    -->
+
+    <!-- <div class="wrapper">
+        <div class="box px">I am 200px wide</div>
+        <div class="box vw">I am 10vw wide</div>
+        <div class="box em">I am 10em wide</div>
+    </div> -->
+
+    <!-- <p>Hey Fellas</p>
+    <div class="container2">
+        <div class="box2">
+            Welcome to CodeHelp
+        </div>
+    </div> -->
+
+    <!-- 
+        Size of parent is 10px
+        Size of child is 10em, so it becomes 10*size of parent = 100px
+        Depends upon parent
+    -->
+
+    <!-- 
+        Do the same with padding and tell what you observed? 
+
+        Same thing
+    -->
+
+    <div class="container3">
+        <div class="box3">
+            Welcome to CodeHelp
+        </div>
+    </div> 
+
+    <!-- 
+        rem depends upon Font size of the root element. 
+        (Relative unit according to root element)
+        root element -> html tag
+    -->
+
+    <!-- <p class="firstpara">
+        Hey Fellas
+    </p> -->
+
+</html>
+
+<!-- https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units -->
+
+<!-- 
+    Difference between physical and logical pixel? 
+    
+    Physical pixels are the size of the actual hardware pixels on a device, 
+    while logical pixels are a relative measurement that takes into account the pixel density of a device
+-->
+
+<!-- 
+    Low resolution: low ppi
+    High resolution: high ppi
+
+    ppi vs dpi?
+    PPI describes the resolution in pixels of a digital image 
+    whereas DPI describes the amount of ink dots on a printed image.
+-->
+
+<!-- 
+    To make responsive website, we don't use absolute unit (fixed length) -> try to use it less
+
+    For responsive website:
+        a) All the units should be relative like em, rem, etc.
+        b) Use media queries.
+        c) use CSS techniques like flexbox or grid to rearrange and stack content.
+-->
