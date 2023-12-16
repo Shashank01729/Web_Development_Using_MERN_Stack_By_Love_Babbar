@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex Box</title>
+    </head>
+    <style>
+        .container{
+            background-color: beige;
+            border: solid black 5px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap; 
+            height: 900px;
+            justify-content: start;
+            align-items: start;
+            align-content: start; 
+
+            /* 
+            The align-self CSS property overrides a grid or flex item's align-items value. 
+            In Grid, it aligns the item inside the grid area. In Flexbox, it aligns the item on the cross axis. 
+            */
+
+        }
+
+        .box{
+            /* height: 200px;
+            width: 200px; */
+            margin: 2px;
+            padding: 2px;
+        }
+
+        #box1{
+            background-color: aqua;
+            border: solid black 2px;
+            /* flex-shrink: 4; */
+            /* Now box1 will shrink at 4X speed as comapred to other boxes */
+            /* flex-grow: 1; */
+            align-self: end;
+        }
+
+        #box2{
+            background-color: blue;
+            border: solid black 2px;
+            /* flex-grow: 1; */
+        }
+
+        #box3{
+            background-color: orange;
+            border: solid black 2px;
+            /* flex-grow: 1; */
+        }
+
+        #box4{
+            background-color: brown;
+            border: solid black 2px;
+            /* flex-grow: 1; */
+            /* flex-basis: 400px;  */
+            /* The initial width of box-4 is set to 400px */
+
+            /* If we did flex direction column then the height will be affected */
+        }
+        /* When flex-grow: 1; for everyone then all of them takes the space */
+
+        /* 
+        The flex-grow CSS property sets the flex grow factor, which specifies how much of the flex container's 
+        remaining space should be assigned to the flex item's main size. 
+        */
+
+        /* Negative values is consideed invalid for both shrink and grow */
+    </style>
+    <body>
+        <div class="container">
+            <div class="box" id="box1">Box 1</div>
+            <div class="box" id="box2">Box 2</div>
+            <div class="box" id="box3">Box 3</div>
+            <div class="box" id="box4">Box 4</div>
+        </div>
+        <!-- When we inspect and if we make the viewport size small or big then the items shrink or grow at equal speed. -->
+        <!-- We are using flex grow to take the remaining space in the container -->
+
+        <!-- 
+            ShortHand notation for flex
+            flex: <flex-grow> <flex-shrink> <flex-basics> 
+        -->
+
+        <!-- flex-basics is used to set the initial dimension of the flex item -->
+    </body>
+</html>
+
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/align-self -->

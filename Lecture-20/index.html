@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex Box</title>
+    </head>
+    <style>
+        .container{
+            background-color: beige;
+            border: solid black 5px;
+            /* I want to make the big container flex */
+            display: flex;
+            flex-direction: row;
+            /* By default the flex property is row, that's why it is looking like this 
+            we can also use flex-direction: column;, row-reverse, column-reverse,etc.*/
+            
+            /* Make sure the width doesn't squeeze */
+            flex-wrap: wrap; 
+            /* no wrap, wrap, wrap reverse */
+            /* The flex-wrap property specifies whether the flexible items should wrap or not */
+            /* 
+            Now, they will not squeeze thier width and will try to come in the next line, 
+            if space is not available then they will have to squeeze.
+
+            In wrap reverse, the last one will go to top and so on.
+            */
+
+            /* 
+            ShortHand notation for flex flow -> flex-flow: <flex-direction> || <flex-wrap>; (In any order)
+            */  
+        }
+
+        .box{
+            height: 200px;
+            width: 200px;
+            margin: 2px;
+            padding: 2px;
+
+        }
+
+        #box1{
+            background-color: aqua;
+            border: solid black 2px;
+        }
+
+        #box2{
+            background-color: blue;
+            border: solid black 2px;
+        }
+
+        #box3{
+            background-color: orange;
+            border: solid black 2px;
+        }
+
+        #box4{
+            background-color: brown;
+            border: solid black 2px;
+        }
+    </style>
+    <body>
+        <!-- 1-D Layout Method -->
+        <!-- Flex box is a powerful tool for layout method for 1-D -->
+        <!-- Parent container is called flex container and the items inside is called flex item -->
+        <!-- By default we call the horizontal axis the main axis and the vertical axis the cross axis -->
+
+        <div class="container">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+        </div>
+
+        <!-- Justify-Content places elements according to the main axis -->
+        <!-- 
+            If flex direction is row then main axis is horizontal 
+            If flex direction is columnw then main axis is vertical
+        -->
+        <!-- Can place item in start, end, center, can add space (By space around, space evenly, space between)  -->
+    </body>
+</html>
+
+<!-- https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox -->

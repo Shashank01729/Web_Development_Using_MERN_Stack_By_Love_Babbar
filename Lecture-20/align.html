@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex Box</title>
+    </head>
+    <style>
+        .container{
+            background-color: beige;
+            border: solid black 5px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; 
+            height: 900px;
+
+            /* align-items: center; */
+            /* It works corresponding to the cross axis(vertical axis) */
+
+            /* align-items: stretch; */
+            /* 
+            Remove the height then use align-items: stretch; 
+            By default item stretches, if there is no height hard coded
+            */
+
+            /* To place in the middle of the container */
+            /* justify-content: center;
+            align-items: center; */
+
+            justify-content: start;
+            align-items: start;
+            /* 
+            When we decrease the size by inspecting, then there is space coming, 
+            there is a property called align content by which we can decrease the space between them
+            */
+            align-content: start; 
+            /* Now the boxes are together */
+            /* We can use end, center */
+        }
+
+        .box{
+            height: 200px;
+            width: 200px;
+            margin: 2px;
+            padding: 2px;
+
+        }
+
+        #box1{
+            background-color: aqua;
+            border: solid black 2px;
+        }
+
+        #box2{
+            background-color: blue;
+            border: solid black 2px;
+        }
+
+        #box3{
+            background-color: orange;
+            border: solid black 2px;
+        }
+
+        #box4{
+            background-color: brown;
+            border: solid black 2px;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+        </div>
+    </body>
+</html>
