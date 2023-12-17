@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        .box{
+            background-color: aqua;
+            height: 400px;
+            width: 400px;
+            border: solid black 3px;
+        }
+
+        /* If greater than  or equal to 300px and less than or equal to 500px then set background color to green */
+        @media(min-width: 300px) and (max-width: 500px){
+            .box{
+                background-color: green;
+            }
+        }
+
+
+        .container{
+            background-color: beige;
+            border: solid black 5px;
+            margin: 2px;
+            padding: 2px;
+            display: flex;
+        }
+
+        .box1{
+            border: solid black 3px;
+            height: 200px;
+            width: 200px;
+        }
+
+        #box2{
+            background-color: red;
+        }
+
+        #box3{
+            background-color: aqua;
+        }
+
+        #box4{
+            background-color: yellow;
+        }
+
+        #box5{
+            background-color: green;
+        }
+
+        /* Let: 0-640: Medium -> column
+                >640: Large -> row
+        */
+        @media(min-width: 640px){
+            .container{
+                flex-direction: row;
+            }
+        }
+
+        @media(max-width: 640px){
+            .container{
+                flex-direction: column;
+            }
+        }
+    </style>
+    <body>
+        <!-- 
+            Media queries allow you to apply CSS styles depending on a device's general type (such as print vs. screen) 
+            or other characteristics such as screen resolution or browser viewport width. Media queries are used for the 
+            following:
+
+                1) To conditionally apply styles with the CSS @media and @import at-rules.
+                2) To target specific media for the <style>, <link>, <source>, and other HTML elements with the media= attribute.
+                3) To test and monitor media states using the Window.matchMedia() and EventTarget.addEventListener() methods. 
+        -->
+
+        <div class="box">
+            Hey Fellas!
+        </div>
+
+        <br>
+
+        <div class="container">
+            <div class="box1" id="box2">BOX-1</div>
+            <div class="box1" id="box3">BOX-2</div>
+            <div class="box1" id="box4">BOX-3</div>
+            <div class="box1" id="box5">BOX-4</div>
+        </div>
+    </body>
+</html>

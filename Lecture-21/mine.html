@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        .container2{
+            background-color: beige;
+            border: solid black 5px;
+            margin: 2px;
+            padding: 2px;
+            display: flex;
+            width: 580px;
+        }
+
+        .container3{
+            background-color: aqua;
+            border: solid black 5px;
+            margin: 2px;
+            padding: 2px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .text{
+            border: solid black 3px;
+        }
+
+        #txt{
+            width: 282px;
+        }
+
+        #txt1{
+            background-color: rgb(206, 224, 7);
+        }
+
+        #txt2{
+            background-color: rgb(81, 221, 11);
+        }
+
+        /* Let: 0-640: Medium -> column
+                >640: Large -> row
+        */
+        @media(min-width: 640px){
+            .container2{
+                flex-direction: row;
+            }
+        }
+
+        @media(max-width: 640px){
+            .container2{
+                flex-direction: column;
+                width: 300px;
+            }
+
+            .container3{
+                flex-direction: row;
+            }
+
+            #txt{
+                height: fit-content;
+                order: 1;
+            }
+
+            .text{
+                height: fit-content;
+            }
+
+            #pic{
+                order: -1;
+            }
+        }
+    </style>
+    <body>
+        <div class="container2">
+            <div class="container3" id="txt">
+                <div class="text" id="txt1">HEY FELLAS!</div>
+                <div class="text" id="txt2">SHASHANK HERE</div>
+            </div>
+            <div class="container3" id="pic">
+                <img src="Shashank1.jpg" alt="" height="300px">
+            </div>
+        </div>
+    </body>
+</html>
