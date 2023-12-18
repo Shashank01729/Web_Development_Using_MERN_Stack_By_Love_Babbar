@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animation in CSS</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .container{
+                height: 100vh;
+                width: 100vw;
+                background-color: beige;
+                border: 5px solid black;
+            }
+
+            .box1{
+                height: 80px;
+                width: 350px;
+                background-color: blue;
+                border-radius: 10px;
+                border: 2px solid yellow;
+                position: relative;   
+                animation: 5s linear 1s infinite alternate none running right_movement;
+            }
+
+            .ball{
+                height: 100px;
+                width: 100px;
+                background-color: blue;
+                border-radius: 10px;
+                border: 2px solid yellow;
+                position: relative;   
+                animation: 5s linear 1s infinite alternate none running ball_movement;
+                border-radius: 500px;
+            }
+
+            .box2{
+                height: 80px;
+                width: 350px;
+                background-color: blue;
+                border-radius: 10px;
+                border: 2px solid yellow;
+                position: relative;   
+                animation: 5s linear 1s infinite alternate none running left_movement;
+            }
+
+            @keyframes right_movement{
+                from{
+                    top: 0;
+                    left: 0;
+                }
+                to{
+                    top: 0;
+                    left: 1100px;
+                }
+            }
+
+            @keyframes ball_movement{
+                from{
+                    top: 0px;
+                    left: 0px;
+                }
+                to{
+                    top: 400px;
+                    left: 1100px;
+                }
+            }
+
+            @keyframes left_movement{
+                from{
+                    top: 400px;
+                    left: 0px;
+                }
+                to{
+                    top: 400px;
+                    left: 1100px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box1"></div>
+            <div class="ball"></div>
+            <div class="box2"></div>
+        </div> 
+    </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animation in CSS</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .container{
+                height: 100vh;
+                width: 100vw;
+                background-color: beige;
+                border: 5px solid black;
+            }
+
+            .box{
+                height: 80px;
+                width: 350px;
+                background-color: blue;
+                border-radius: 10px;
+                border: 2px solid yellow;
+                position: relative;   /* To use top, left, right, bottom */
+                animation-name: right_movement;
+                animation-duration: 5s;
+                animation-iteration-count: 1;
+                /* animation-iteration-count: infinite; */
+                animation-delay: 2s;
+                /* Till here we will notice that, it starts fast but in the end it becomes slow */
+                /* To rectify this we use animation-timing-function */
+                /* 
+                The animation-timing-function property can have the following values:
+                    ease - Specifies an animation with a slow start, then fast, then end slowly (this is default)
+                    linear - Specifies an animation with the same speed from start to end
+                    ease-in - Specifies an animation with a slow start
+                    ease-out - Specifies an animation with a slow end
+                    ease-in-out - Specifies an animation with a slow start and end
+                    cubic-bezier(n,n,n,n) - Lets you define your own values in a cubic-bezier function 
+                */
+
+                /* animation-timing-function: linear; */
+                animation-timing-function: cubic-bezier(0.64,-0.26, 0.49,-0.22);
+                
+                /* It goes to the right, then cut, the restarts animation */
+                /* To make it comeback, we use animation-direction: alternate; */
+
+                /* animation-direction: alternate; */
+                /* SRC to DEST then DEST to SRC */
+
+                /* animation-direction: alternate-reverse; */
+                /* DEST to SRC then SRC to DEST */
+
+
+                animation-fill-mode: forwards;
+                /* What to do after last frame, forwards=> stops */
+
+                /* animation-fill-mode: forwards; */
+                /* Will come back to SRC and stop */
+
+                /* 
+                The animation-fill-mode property specifies a style for the target element when the animation is not playing (before it starts, after it ends, or both).
+                The animation-fill-mode property can have the following values:
+                    none - Default value. Animation will not apply any styles to the element before or after it is executing
+                    forwards - The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)
+                    backwards - The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period
+                    both - The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions 
+                */
+
+                animation: 5s linear 1s infinite alternate none running right_movement;
+                /* 
+                animation: 3s ease-in 1s infinite reverse both running slidein;
+                It is a shorthand for animation-name, animation-duration, animation-timing-function, 
+                animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, 
+                animation-play-state, and animation-timeline.
+                */
+
+                /*  
+                animation-play-state: paused;
+                animation-play-state: running; 
+                */
+                
+            }
+
+            @keyframes right_movement{
+                from{
+                    top: 0;
+                    left: 0;
+                }
+                to{
+                    top: 0;
+                    left: 1000px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- When a particular element or component shifts from style 1 to style 2 then it is called animation -->
+        <!-- Change from this to to that frame is stored inside @keyframe -->
+        <div class="container">
+            <div class="box">
+
+            </div>
+        </div> 
+    </body>
+</html>
+
+<!-- https://www.w3schools.com/css/css3_animations.asp -->
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/animation -->
+<!-- 
+    @keyframes
+    animation-name
+    animation-duration
+    animation-delay
+    animation-iteration-count
+    animation-direction
+    animation-timing-function
+    animation-fill-mode
+    animation
+-->
+
+<!-- 
+    Short Hand noation for animation
+/* 
+    @keyframes duration | easing-function | delay |
+    iteration-count | direction | fill-mode | play-state | name */
+    animation: 3s ease-in 1s 2 reverse both paused slidein;
+
+    /* @keyframes duration | easing-function | delay | name */
+    animation: 3s linear 1s slidein;
+
+    /* two animations */
+    animation:
+    3s linear slidein,
+    3s ease-out 5s slideout;
+-->
