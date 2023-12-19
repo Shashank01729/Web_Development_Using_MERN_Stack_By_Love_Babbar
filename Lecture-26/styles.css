@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* By this now not going outside */
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    /* background-color: beige; */
+    background-color: #E0C3FC;
+    background-image: linear-gradient(62deg, #E0C3FC 9%, #ffffff 66%, #ffffff 77%, #ffffff 91%);
+    overflow-x: hidden;
+}
+
+.navContainer{
+    width: 100vw;
+    /* background-color: rgba(71, 71, 117, 0.61); */
+    background-color: #16104a;
+    background-image: linear-gradient(43deg, #16104a 29%, #4158D0 57%, #397db8 69%, #4eceeb 79%);;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav{
+    width: 100%;
+}
+
+#navList{
+    width: 100%;
+    padding: 15px;
+    list-style: none;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#navLogoName{
+    font-size: 2.8rem;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: azure;
+}
+
+#navListItems{
+    display: flex;
+    gap: 40px;
+}
+
+.contentBox{
+    width: 70%;
+    margin: auto; /* Placed in center */
+    /* border: solid black 1px; */
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 3rem;
+    box-shadow: 0px 0px 40px black;
+}
+
+.item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rightBox{
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s linear 0s;
+    box-shadow: 0px 0px 30px black;
+    border-radius: 20px; /* It hides the sharp edges created when overflow hidden */
+}
+
+.rightBox .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(41, 39, 39, 0.797);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    opacity: 0;
+    transition: all 0.3s linear 0s;
+}
+
+.rightBox .overlay span{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.rightBox:hover .overlay{
+    opacity: 1;
+}
+
+.rightBox img{
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+    /* box-shadow: 0px 0px 30px black; */
+}
+
+.rightBox:hover{
+    transform: scale(1.1);
+}
+
+.leftBox{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.leftBox h2{
+    font-size: 2rem;
+}
+
+.Ing_Box{
+   font-size: 1.4rem;
+}
+
+.Rep_Box{
+    font-size: 1.3rem;
+}
+
+footer{
+    width: 100%;;
+}
+
+.footerBox{
+    background-color: #2B86C5;
+    background-image: linear-gradient(225deg, #2B86C5 41%, #784BA0 63%, #FF3CAC 98%);
+    color: azure;
+    text-align: center;
+    min-height: 20px;
+}
+
+.footerBox p{
+    color: azure;
+    font-size: 1.5rem;
+}
