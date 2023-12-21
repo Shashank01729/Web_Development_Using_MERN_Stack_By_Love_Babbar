@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .container{
+                height: 100vh;
+                width: 100vw;
+                background-color: #0093E9;
+                background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card{
+                height: 600px;
+                width: 400px;
+                background-color: azure;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                box-shadow: 2px 2px 40px 10px;
+            }
+
+            .card img{
+                height: 200px;
+                width: 100%;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px;
+            }
+
+            .txt{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 20px;               
+            }
+
+            .txt h2{
+                font-size: 1.8rem;    
+            }
+            
+            .txt p{
+                padding-inline-start: 30px;
+                text-align: center;
+                font-size: 1.1rem;
+            }
+
+            .subscription{
+                width: 320px;
+                height: 50px;
+                background-color: #0094e968;
+                border-radius: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .subscription img{
+                height: 40px;
+                width: 40px;
+                background-color: beige;
+                border-radius: 10px;
+            }
+            
+            .subscription p{
+                font-size: 1rem;
+            }
+
+            .price{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .subscriptionPlan{
+                display: flex;
+            }
+
+            a{
+                text-decoration: none;
+                font-weight: bold;
+                color: black;
+            }
+
+            .paymentbox{
+                box-shadow: 0px 10px 20px black;
+                border-radius: 10px;
+            }
+
+            #PaymentButton{
+                background-color: #0f0639ec;
+                color: white;
+                height: 50px;
+                width: 320px;
+                border-radius: 10px;
+                text-decoration: none;
+                border: none;
+            }
+
+        </style>
+    <body>
+        <div class="container">
+            <div class="card">
+                <section class="image">
+                    <img src="icon.jpg" alt="">
+                </section>
+
+                <section class="txt">
+                    <h2>
+                        Order Summary
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam consectetur, 
+                        velit eos modi mollitia ut qui officia eveniet accusantium consequatur!
+                    </p>
+                    <div class="subscription">
+                        <div class="subscriptionPlan">
+                            <img src="music.png" alt="">
+                            <div class="price">
+                                <p>Annual Plan</p>
+                                <p>$99.9/year</p>
+                            </div>
+                        </div>
+                        <div class="subscriptionChange">
+                            <a href="">Change</a>
+                        </div>
+                    </div>
+                    <div class="paymentbox">
+                        <input type="button" value="Proceed to Payment" id="PaymentButton">
+                    </div>
+                    
+                    <a href="#">
+                        Cancel Order
+                    </a>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!-- I could have also used left and right box for subscription -->
+<!-- Remember this next time -->
