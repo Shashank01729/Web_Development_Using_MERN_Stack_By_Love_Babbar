@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GRID-2</title>
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100%;
+            width: 100%;
+        }
+
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color: rgba(56, 53, 53, 0.945);
+            display: grid;
+            grid-template-rows: repeat(4,200px);
+            grid-template-columns: repeat(1,1fr);
+            padding: 4rem;
+            border: solid white 5px;
+        }
+
+        .item{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(52, 210, 44);
+            border: solid white 5px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* justify-self: end; */  /* The item(here the whole box, not talking about box content) is place at the end of the column */
+            /* justify-self: start; */
+            /* justify-self: center; */
+            /* justify-self: stretch; */
+            /* stretch would work when you will not specify the height and width, remove it and see */
+
+            /* align-self: end;
+            align-self: center;
+            align-self: start;
+            align-self: stretch; */
+
+            /* By combining justify self and align self there is a property called place self */
+
+            /* place-self: center; */ /* Will find the center of both horizontal and vertical, then place it */
+            /* place-self: end; */
+            /* place-self: stretch; */
+        }
+
+    </style>
+    <body>
+        <div class="container">
+            <div class="item A">A</div>
+            <div class="item B">B</div>
+            <div class="item C">C</div>
+            <div class="item D">D</div>
+        </div>
+    </body>
+</html>

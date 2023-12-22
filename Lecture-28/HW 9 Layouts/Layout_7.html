@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Layout-7</title>
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color: rgb(60, 9, 95);
+            padding: 4rem;
+            display: grid;
+            gap: 1rem;
+            grid-template-rows: repeat(26,1fr);
+            grid-template-columns: repeat(26,1fr);
+        }
+
+        .items{
+            border: solid black 5px;
+            background-color: rgb(29, 210, 50);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .A{
+            grid-column-start: 1;
+            grid-column-end: 14;
+            grid-row-start: 1;
+            grid-row-end: 7;
+        }
+
+        .B{
+            grid-column-start: 14;
+            grid-column-end: 27;
+            grid-row-start: 1;
+            grid-row-end: 7;
+        }
+        
+        .C{
+            grid-column-start: 1;
+            grid-column-end: 14;
+            grid-row-start: 7;
+            grid-row-end: 27;
+        }
+
+        .D{
+            grid-column-start: 14;
+            grid-column-end: 27;
+            grid-row-start: 7;
+            grid-row-end: 27;
+        }
+
+        .E{
+            grid-column-start: 15;
+            grid-column-end: 26;
+            grid-row-start: 9;
+            grid-row-end: 16;
+        }
+
+        .F{
+            grid-column-start: 15;
+            grid-column-end: 20;
+            grid-row-start: 17;
+            grid-row-end: 25;
+        }
+
+        .G{
+            grid-column-start: 21;
+            grid-column-end: 26;
+            grid-row-start: 17;
+            grid-row-end: 25;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="items A">A</div>
+            <div class="items B">B</div>
+            <div class="items C">C</div>
+            <div class="items D">D</div>
+            <div class="items E" style="background-color: red;">E</div>
+            <div class="items F" style="background-color: red;">F</div>
+            <div class="items G" style="background-color: red;">G</div>
+        </div>
+    </body>
+</html>

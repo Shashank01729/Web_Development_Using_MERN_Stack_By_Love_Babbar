@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Layout-6</title>
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color: rgb(60, 9, 95);
+            padding: 4rem;
+            display: grid;
+            gap: 1rem;
+            grid-template-rows: repeat(5,1fr);
+            grid-template-columns: repeat(4,1fr);
+
+            grid-template-areas: 
+                "A A B C"
+                "D E F ."
+                "G G H I"
+                "G G J ."
+                "K K K L";
+        }
+
+        .items{
+            border: solid black 5px;
+            background-color: rgb(29, 210, 50);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .A{
+            grid-area: A;
+        }
+
+        .B{
+            grid-area: B;
+        }
+
+        .C{
+            grid-area: C;
+        }
+
+        .D{
+            grid-area: D;
+        }
+
+        .A{
+            grid-area: A;
+        }
+
+        .E{
+            grid-area: E;
+        }
+
+        .F{
+            grid-area: F;
+        }
+
+        .G{
+            grid-area: G;
+        }
+
+        .H{
+            grid-area: H;
+        }
+
+        .I{
+            grid-area: I;
+        }
+
+        .J{
+            grid-area: J;
+        }
+
+        .K{
+            grid-area: K;
+        }
+
+        .L{
+            grid-area: L;
+        }
+        
+    </style>
+    <body>
+        <div class="container">
+            <div class="items A">A</div>
+            <div class="items B">B</div>
+            <div class="items C">C</div>
+            <div class="items D">D</div>
+            <div class="items E">E</div>
+            <div class="items F">F</div>
+            <div class="items G">G</div>
+            <div class="items H">H</div>
+            <div class="items I">I</div>
+            <div class="items J">J</div>
+            <div class="items K">K</div>
+            <div class="items L">L</div>
+        </div>
+    </body>
+</html>
