@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid Template Area</title>
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100%;
+            width: 100%;
+        }
+
+        .container{
+            height: 100%;
+            width: 100%;
+            display: grid;
+            gap: 1rem;
+            padding: 4rem;
+            background-color: rgb(79, 75, 75);
+            grid-template-areas: 
+                "header header header"
+                "sidebar content1 content1"
+                "sidebar content2 content3"
+                "footer footer footer"
+            ;
+        }
+
+        .items{
+            border: solid black 2px;
+            background-color: rgb(82, 82, 184);
+            color: white;
+            padding: 1rem;
+        }
+
+        #header{
+            grid-area: header;
+        }
+
+        #sidebar{
+            grid-area: sidebar;
+        }
+
+        #content1{
+            grid-area: content1;
+        }
+
+        #content2{
+            grid-area: content2;
+        }
+
+        #content3{
+            grid-area: content3;
+        }
+
+        #footer{
+            grid-area: footer;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="items" id="header">Header</div>
+            <div class="items" id="sidebar">SideBar</div>
+            <div class="items" id="content1">Content-1</div>
+            <div class="items" id="content2">Content-2</div>
+            <div class="items" id="content3">Content-3</div>
+            <div class="items" id="footer">Footer</div>
+            <!-- <div class="items">G</div>
+            <div class="items">H</div>
+            <div class="items">I</div>
+            <div class="items">J</div>
+            <div class="items">K</div>
+            <div class="items">L</div>
+            <div class="items">M</div>
+            <div class="items">N</div>
+            <div class="items">O</div>
+            <div class="items">P</div> -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Grid Design</title>
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100%;
+            width: 100%;
+        }
+
+        .container{
+            height: 100%;
+            width: 100%;
+            padding: 4rem;
+            display: grid;
+            gap: 1rem;
+            background-color: rgb(71, 65, 65);
+            /* grid-template-columns: repeat(3,1fr); */
+            grid-template-columns: repeat(auto-fit, minmax(300px,500px));
+        }
+
+        .items{
+            border: solid black 5px;
+            background-color: rgb(85, 85, 208);
+            color: white;
+            padding: 1rem;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="items">A</div>
+            <div class="items">B</div>
+            <div class="items">C</div>
+            <div class="items">D</div>
+            <div class="items">E</div>
+            <div class="items">F</div>
+            <div class="items">G</div>
+            <div class="items">H</div>
+            <div class="items">I</div>
+            <div class="items">J</div>
+            <div class="items">K</div>
+            <div class="items">L</div>
+            <div class="items">M</div>
+            <div class="items">N</div>
+            <div class="items">O</div>
+            <div class="items">P</div>
+        </div>
+    </body>
+</html>
+
+<!-- Difference between auto-fill and auto-fit -->
+<!--
+    In Short, Auto-fit: Fit entire length of container. Auto-fill: Doesn't fit entire length of the container.
+    When using minmax() function, the auto-fit keyword will expand the grid items to fill the available space. 
+    While auto-fill will keep the available space reserved without altering the grid items width. 
+-->

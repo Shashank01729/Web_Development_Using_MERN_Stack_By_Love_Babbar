@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 85vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+}
+
+.header_container{
+    margin-bottom: 2.8rem;
+}
+
+.header_title{
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.header_desc{
+    max-width: 570px;
+    text-align: center;
+    color: rgb(48, 46, 46);
+    margin: 0 auto; /* margin: <top and bottom> <left and right> */   
+}
+
+.main_container{
+    display: grid;
+    gap: 1.5rem;
+    /* grid-template-columns: repeat(1,1fr); */
+    grid-template-columns: repeat(auto-fit,minmax(350px,400px));
+    justify-content: center;
+
+}
+
+.card_container{
+    display: flex;
+    flex-direction: column;
+    border: solid rgb(209, 203, 203) 1px;
+    border-radius: 5px;   
+    overflow: hidden;
+}
+
+.card_image_container{
+    position: relative;
+    overflow: hidden;
+    height: 16rem;
+}
+
+/* Reducing the height of the image for more sapce for content */
+@media (min-width: 700px){
+    .card_image_container{
+        height: 11rem;
+    }
+}
+
+.card_image{
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s linear;
+}
+
+.card_title_container{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+
+}
+
+.card_container:hover .card_image{  
+    transform: scale(1.1);
+}
+
+.card_title{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(11, 9, 9);
+    line-height: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.card_title_anchor:hover .card_title{
+    color: blueviolet;
+}
+
+.card_desc{
+    font-size: 1rem;
+    color: rgb(105, 99, 99);
+}
+
+.card_footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.author_container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author_avatar_container{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: solid rgb(99, 96, 96) 1px;
+    border-radius: 50%;
+    background-color: rgb(228, 221, 221);
+}
+
+.author_info_container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* We can use class also, here will use CSS :nth-child() Selector*/
+.author_name{
+    color: blue;
+}
+
+.author_date{
+    color: grey;
+}
+
+.card_tag_container{
+    border: solid rgb(71, 66, 66) 1px;
+    color: grey;
+    font-size:0.9rem;
+    border-radius: 2px;
+    padding: 0.25rem 0.5rem; /* top bottom, left right */
+}
+
+/* @media (min-width: 732px){
+    .main_container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width: 1094px){
+    .main_container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (min-width: 1300px){
+    .main_container{
+        grid-template-columns: repeat(4,1fr);
+    }
+} */
