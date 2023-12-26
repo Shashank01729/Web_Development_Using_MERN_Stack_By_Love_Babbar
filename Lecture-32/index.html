@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 3-D Tranforms</title>
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100%;
+            width: 100%;
+        }
+
+        .container{
+            background-color: antiquewhite;
+            padding: 5rem;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1rem;
+        }
+
+        .item{
+            height: 150px;
+            width: 150px;
+            background-color: rgb(86, 175, 31);
+            border: solid black 2px;
+            padding: 2rem;
+        }
+
+        #RotateX:hover{
+            transform: rotateX(45deg);
+        }
+
+        #RotateY:hover{
+            transform: rotateY(-45deg);   /* Anti Clockwise */
+        }
+
+
+        #RotateZ:hover{
+            transform: rotateZ(45deg);
+        }
+
+        #TranslateX:hover{
+            transform: translateX(-100px);
+        }
+
+        #TranslateY:hover{
+            transform: translateY(100px);
+        }
+
+        /* We can't se translateZ, so we will have to change the perspective for visibilty */
+        #TranslateZ:hover{
+            transform: perspective(300px) translateZ(100px);
+
+            /* 
+            The perspective CSS property determines the distance between the z=0 plane and the user 
+            in order to give a 3D-positioned element some perspective. 
+            */
+            /* Try this one by one */
+            /* transform: perspective(300px) translateZ(200px);
+            transform: perspective(300px) translateZ(300px); */
+            /* transform: perspective(300px) translateZ(299px); */
+        }
+
+        #ScaleX:hover{
+            transform: scaleX(1.5);
+        }
+
+        #ScaleY:hover{
+            transform: scaleY(-1.5);
+        }
+
+        #ScaleZ:hover{
+            transform: perspective(300px) scaleZ(5) rotateY(30deg);
+        }
+
+        #SkewX:hover{
+            transform: skewX(30deg);
+        }
+
+        #SkewY:hover{
+            transform: skewY(30deg);
+        }
+
+        #SkewZ:hover{
+            /* transform: skewZ(); */
+        }
+        
+    </style>
+    <body>
+        <div class="container">
+            <div class="item" id="RotateX">RotateX</div>
+            <div class="item" id="RotateY">RotateY</div>
+            <div class="item" id="RotateZ">RotateZ</div>
+            <div class="item" id="TranslateX">TranslateX</div>
+            <div class="item" id="TranslateY">TranslateY</div>
+            <div class="item" id="TranslateZ">TranslateZ</div>
+            <div class="item" id="ScaleX">ScaleX</div>
+            <div class="item" id="ScaleY">ScaleY</div>
+            <div class="item" id="ScaleZ">ScaleZ</div>
+            <div class="item" id="SkewX">SkewX</div>
+            <div class="item" id="SkewY">SkewY</div>
+            <div class="item" id="SkewZ">SkewZ</div>
+        </div>
+    </body>
+</html>
+
+
+<!-- 
+             Z-axis
+        |  /
+Y-axis  | /
+        |/______ X-axis
+
+    Looking from front
+-->
